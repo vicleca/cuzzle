@@ -1,6 +1,6 @@
 # Cuzzle, cURL command from Guzzle requests
 
-[![Build Status](https://travis-ci.org/namshi/cuzzle.svg?branch=master)](https://travis-ci.org/namshi/cuzzle)
+[![Build Status](https://travis-ci.org/vicleca/cuzzle.svg?branch=master)](https://travis-ci.org/vicleca/cuzzle)
 
 This library let's you dump a Guzzle request to a cURL command for debug and log purpose.
 
