@@ -134,7 +134,7 @@ class CurlFormatter
 
         if ($contents) {
             // clean input of null bytes
-             $contents = str_replace(chr(0), '', $contents);
+            $contents = str_replace(chr(0), '', $contents);
             $this->addOption('d', $this->escapeShellArgument($contents));
         }
 
@@ -199,6 +199,28 @@ class CurlFormatter
         }
     }
 
+    /**
+     * @param RequestInterface $request
+     * @param array            $options
+     */
+    protected function extractCommonArguments(RequestInterface $request, array $options)
+    {
+        $proxy = isset($options['proxy']) ? $options['proxy'] : '';
+        if(!empty($proxy)) {
+            $this->addOption('x', $this->escapeShellArgument($proxy));
+        }
+
+        $timeout = isset($options['timeout']) ? $options['timeout'] : '';
+        if(!empty($timeout)) {
+            $this->addOption('-connect-timeout', $timeout);
+        }
+
+        $verifySsl = isset($options['verify']) ? $options['verify'] : true;
+        if(!$verifySsl) {
+            $this->addOption('k');
+        }
+    }
+
     protected function addOptionsToCommand()
     {
         ksort($this->options);
@@ -227,6 +249,7 @@ class CurlFormatter
         $this->extractCookiesArgument($request, $options);
         $this->extractHeadersArgument($request, $options);
         $this->extractUrlArgument($request);
+        $this->extractCommonArguments($request, $options);
     }
 
     /**
@@ -240,7 +263,6 @@ class CurlFormatter
     protected function escapeShellArgument($argument)
     {
         $process = new Process([$argument]);
-        $escaped = $process->getCommandLine();
-        return $escaped;
+        return $process->getCommandLine();
     }
 }
