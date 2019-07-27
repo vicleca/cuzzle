@@ -1,8 +1,8 @@
 <?php
 
-namespace Namshi\Cuzzle\Middleware;
+namespace Vicleca\Cuzzle\Middleware;
 
-use Namshi\Cuzzle\Formatter\CurlFormatter;
+use Vicleca\Cuzzle\Formatter\CurlFormatter;
 use Psr\Log\LoggerInterface;
 use Psr\Http\Message\RequestInterface;
 
@@ -10,7 +10,7 @@ use Psr\Http\Message\RequestInterface;
  * Class CurlFormatterMiddleware middleware
  * it allow to attach the CurlFormatter to a Guzzle Request
  *
- * @package Namshi\Cuzzle\Middleware
+ * @package Vicleca\Cuzzle\Middleware
  */
 class CurlFormatterMiddleware
 {

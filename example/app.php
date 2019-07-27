@@ -3,7 +3,7 @@
 require '../vendor/autoload.php';
 
 use GuzzleHttp\Client;
-use Namshi\Cuzzle\Subscriber\CurlFormatterSubscriber;
+use Vicleca\Cuzzle\Subscriber\CurlFormatterSubscriber;
 use Monolog\Logger;
 use Monolog\Handler\TestHandler;
 

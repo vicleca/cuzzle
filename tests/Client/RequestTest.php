@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Request;
-use Namshi\Cuzzle\Formatter\CurlFormatter;
+use Vicleca\Cuzzle\Formatter\CurlFormatter;
 
 class RequestTest extends \PHPUnit_Framework_TestCase
 {

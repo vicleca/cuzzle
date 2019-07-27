@@ -1,6 +1,6 @@
 <?php
 
-namespace Namshi\Cuzzle\Formatter;
+namespace Vicleca\Cuzzle\Formatter;
 
 use GuzzleHttp\Cookie\CookieJarInterface;
 use GuzzleHttp\Cookie\SetCookie;
@@ -9,7 +9,7 @@ use Symfony\Component\Process\Process;
 
 /**
  * Class CurlFormatter it formats a Guzzle request to a cURL shell command
- * @package Namshi\Cuzzle\Formatter
+ * @package Vicleca\Cuzzle\Formatter
  */
 class CurlFormatter
 {

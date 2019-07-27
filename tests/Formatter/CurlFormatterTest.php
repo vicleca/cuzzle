@@ -1,6 +1,6 @@
 <?php
 
-use Namshi\Cuzzle\Formatter\CurlFormatter;
+use Vicleca\Cuzzle\Formatter\CurlFormatter;
 use GuzzleHttp\Psr7\Request;
 
 class CurlFormatterTest extends \PHPUnit_Framework_TestCase

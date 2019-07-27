@@ -4,7 +4,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Handler\MockHandler;
-use Namshi\Cuzzle\Middleware\CurlFormatterMiddleware;
+use Vicleca\Cuzzle\Middleware\CurlFormatterMiddleware;
 
 class CurlFormatterMiddlewareTest extends \PHPUnit_Framework_TestCase
 {
